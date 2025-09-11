@@ -8,10 +8,7 @@ const BottemBar = ({ setActive }) => {
   };
 
   const handleReportButton = () => {
-  fetch("/SendEmailToUser") 
-    .then(res => res.json())
-    .then(data => console.log(data)) 
-    .catch(err => console.error(err));
+  setActive("ReportScreen")
 };
 
 
@@ -25,8 +22,8 @@ const BottemBar = ({ setActive }) => {
       <button id='ScreenTimeButton' onClick={handleScreenTimeButton}>
       <img src='../../screentime.svg'></img>
       </button>
-      <button id='reportButton' onClick={handleReportButton}>
-      <img src='../../temp.svg'></img>
+      <button id='reportScreenButton' onClick={handleReportButton}>
+      <img src='../../screenReport.svg'></img>
       </button>
       <button className='tempButton' onClick={() => handleTempButton('Temp Button Two')}>
       <img src='../../temp.svg'></img>
@@ -34,6 +31,10 @@ const BottemBar = ({ setActive }) => {
       <button className='tempButton' onClick={() => handleTempButton('Temp Button Three')}>
       <img src='../../temp.svg'></img>
       </button>
+      <p style={{ marginTop: "0px" }}>Screen Time</p>
+      <p style={{ marginTop: "0px" }}>Report</p>
+      <p style={{ marginTop: "0px" }}>Temp</p>
+      <p style={{ marginTop: "0px" }}>Temp</p>
     </div>
 
   )

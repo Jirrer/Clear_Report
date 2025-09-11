@@ -3,6 +3,7 @@ import BottemBar from './Components/BottemBar'
 import ScreenTime from './Components/ScreenTime'
 import LineChart from './Components/LineChart'
 import WorkInProgress from './Components/WorkInProgress';
+import ReportScreen from './Components/ReportScreen';
 import './App.css';
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
     <>
     <div className='ScreenContent'>
       {active === 'ScreenTime' && <ScreenTime />}
+      {active === 'ReportScreen' && <ReportScreen />}
       {active === 'UnderConstruction' && <WorkInProgress />}
     </div>
     <BottemBar setActive={setActive} />

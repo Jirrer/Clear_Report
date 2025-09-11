@@ -6,10 +6,35 @@
 }
 
 .LineChart {
+  border: 0;
   background-color: purple;
   flex: 1;
   margin: 2%;
+  
+}
 
+.ReportScreen {
+  min-height: 90vh;
+  background-color: #5888d6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: auto auto;        
+} 
+
+.ReportScreen div, button {
+  margin: 2%;
+  background-color: blue;
+  border: 0;
+  font-size: 35px;
+}
+#reportScreenLogo {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.ReportScreen button {
+  cursor: pointer;
 }
 
 .BottemBar {
@@ -36,7 +61,13 @@
   display: flex;
   justify-content: center;
   align-items: center; 
-  overflow: hidden;   
+  overflow: hidden;  
+}
+
+.BottemBar p {
+  display: block;
+  margin: 0;
+  padding-top: 0; 
 }
 
 .BottemBar button :hover {

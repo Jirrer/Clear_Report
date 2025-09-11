@@ -14,16 +14,16 @@ const BottemBar = ({ setActive }) => {
   return (
     <div className='BottemBar'>
       <button id='ScreenTimeButton' onClick={handleScreenTimeButton}>
-
+      <img src='../../public/screentime.svg'></img>
       </button>
       <button className='tempButton' onClick={() => handleTempButton('Temp Button One')}>
-      
+      <img src='../../public/temp.svg'></img>
       </button>
       <button className='tempButton' onClick={() => handleTempButton('Temp Button Two')}>
-      
+      <img src='../../public/temp.svg'></img>
       </button>
       <button className='tempButton' onClick={() => handleTempButton('Temp Button Three')}>
-      
+      <img src='../../public/temp.svg'></img>
       </button>
     </div>
 

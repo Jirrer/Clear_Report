@@ -13,6 +13,8 @@
 }
 
 .BottemBar {
+  padding: 0;
+  margin: 0;
   background-color: #5888d6;
   position: sticky;
   height: 10vh;
@@ -21,22 +23,50 @@
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  align-items: center; 
+  justify-items: center;
 }
+
+.BottemBar button {
+  width: 100%;      
+  height: 100%;     
+  padding: 0;
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  overflow: hidden;   
+}
+
+.BottemBar button :hover {
+  cursor: pointer;
+}
+
+.BottemBar img {
+  max-width: 100%;   
+  max-height: 100%;   
+  width: auto;       
+  height: auto;      
+  object-fit: contain;
+}
+
+
 
 .UnderConstruction {
   min-height: 90vh;
   background-color: #5888d6;
   display: flex;
-  justify-content: center;         /* horizontal centering */
-  align-items: center;             /* vertical centering */
+  justify-content: center;         
+  align-items: center;             
   box-sizing: border-box;
 }
 
 .UnderConstruction img {
   max-width: 75%;
-  max-height: 75%;                  /* scale down if needed */
-  height: auto;                     /* maintain aspect ratio */
-  width: auto;                      /* maintain aspect ratio */
+  max-height: 75%;                  
+  height: auto;                     
+  width: auto;                      
   object-fit: contain; 
 }
 

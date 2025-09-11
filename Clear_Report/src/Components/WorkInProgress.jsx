@@ -3,7 +3,7 @@ import React from 'react'
 const WorkInProgress = () => {
   return (
     <div className='UnderConstruction'>
-        <img src='../../public/UnderContruction.png'></img>
+        <img src='../../UnderContruction.png'></img>
     </div>
   )
 }

@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const BottemBar = ({ setActive }) => {
+  const [data, setData] = useState([]);
+
   const handleScreenTimeButton = () => {
-    console.log("ScreenTime button clicked");
-    setActive('ScreenTime');
-  }
+    setActive("ScreenTime"); // switch active screen
+  };
 
   const handleTempButton = (e) => {
     console.log(`${e} is still being worked on`);
@@ -14,16 +15,16 @@ const BottemBar = ({ setActive }) => {
   return (
     <div className='BottemBar'>
       <button id='ScreenTimeButton' onClick={handleScreenTimeButton}>
-      <img src='../../public/screentime.svg'></img>
+      <img src='../../screentime.svg'></img>
       </button>
       <button className='tempButton' onClick={() => handleTempButton('Temp Button One')}>
-      <img src='../../public/temp.svg'></img>
+      <img src='../../temp.svg'></img>
       </button>
       <button className='tempButton' onClick={() => handleTempButton('Temp Button Two')}>
-      <img src='../../public/temp.svg'></img>
+      <img src='../../temp.svg'></img>
       </button>
       <button className='tempButton' onClick={() => handleTempButton('Temp Button Three')}>
-      <img src='../../public/temp.svg'></img>
+      <img src='../../temp.svg'></img>
       </button>
     </div>
 

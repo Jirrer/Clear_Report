@@ -4,8 +4,16 @@ const BottemBar = ({ setActive }) => {
   const [data, setData] = useState([]);
 
   const handleScreenTimeButton = () => {
-    setActive("ScreenTime"); // switch active screen
+    setActive("ScreenTime");
   };
+
+  const handleReportButton = () => {
+  fetch("/SendEmailToUser") 
+    .then(res => res.json())
+    .then(data => console.log(data)) 
+    .catch(err => console.error(err));
+};
+
 
   const handleTempButton = (e) => {
     console.log(`${e} is still being worked on`);
@@ -17,7 +25,7 @@ const BottemBar = ({ setActive }) => {
       <button id='ScreenTimeButton' onClick={handleScreenTimeButton}>
       <img src='../../screentime.svg'></img>
       </button>
-      <button className='tempButton' onClick={() => handleTempButton('Temp Button One')}>
+      <button id='reportButton' onClick={handleReportButton}>
       <img src='../../temp.svg'></img>
       </button>
       <button className='tempButton' onClick={() => handleTempButton('Temp Button Two')}>
